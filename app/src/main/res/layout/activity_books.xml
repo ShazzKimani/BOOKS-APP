@@ -22,7 +22,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/locationTextView"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true" /
 
 
 
