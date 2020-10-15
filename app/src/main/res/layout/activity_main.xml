@@ -56,7 +56,7 @@
         android:padding="5dp"
         android:fontFamily="@font/lily_script_one"
         android:hint="Enter type of book"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true" /
 
     <Button
 
