@@ -84,7 +84,7 @@
         android:layout_marginRight="265dp"
         android:layout_marginBottom="12dp"
         android:fontFamily="@font/lily_script_one"
-        android:text="Contact Us" />
+        android:text="Contact Us" /
 
 
 </RelativeLayout>
