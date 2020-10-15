@@ -30,7 +30,7 @@
         android:fontFamily="@font/lily_script_one"
         android:text=" Get to read the best tech books ever;"
         android:textColor="@color/colorTextIcons"
-        android:textSize="20s
+        android:textSize="20sp"
         />
 
     <TextView
