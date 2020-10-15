@@ -48,4 +48,4 @@ public class BooksActivity extends AppCompatActivity {
         String location = intent.getStringExtra("location");
         mLocationTextView.setText("Here are all the available books in tech: " + location);
     }
-}
+
