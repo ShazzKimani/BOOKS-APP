@@ -81,7 +81,7 @@
         android:background="@color/colorTextIcons"
         android:fontFamily="@font/lily_script_one"
         android:hint="Message"
-        android:padding="5dp" />
+        android:padding="5dp" /
 
     <Button
 
