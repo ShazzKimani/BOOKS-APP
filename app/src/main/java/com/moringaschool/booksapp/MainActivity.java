@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         mLocationEditText = (EditText) findViewById(R.id.locationEditText);
         mContactUsButton = (Button) findViewById(R.id.contactUsButton);
-        mContactUsButton.setOnClickListener(new View.OnClickListener()
+        mContactUsButton.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
