@@ -17,7 +17,7 @@
         android:textSize="28sp"
         android:fontFamily="@font/lily_script_one"
 
-        /
+        />
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
