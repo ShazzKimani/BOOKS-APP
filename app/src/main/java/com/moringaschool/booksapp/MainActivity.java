@@ -18,42 +18,46 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
-    @BindView(R.id.searchBooksButton) Button mSearchBooksButton;
-    @BindView(R.id.locationEditText) EditText mLocationEditText;
-    @BindView(R.id.contactUsButton) Button mContactUsButton;
+    @BindView(R.id.searchBooksButton)
+    Button mSearchBooksButton;
+    @BindView(R.id.locationEditText)
+    EditText mLocationEditText;
+    @BindView(R.id.contactUsButton)
+    Button mContactUsButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        ButterKnife.bind(this);
+        mLocationEditText = (EditText) findViewById(R.id.locationEditText);
+        mContactUsButton = (Button) findViewById(R.id.contactUsButton);
+        mContactUsButton.setOnClickListener(new View.OnClickListener() {
+
 
             @Override
-            protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_main);
-
-                ButterKnife.bind(this);
-                mLocationEditText = (EditText) findViewById(R.id.locationEditText);
-                mContactUsButton = (Button) findViewById(R.id. contactUsButton);
-                mContactUsButton .setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ContactActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(MainActivity.this, ContactActivity.class);
-                        startActivity(intent);
-                    }
-                });
+        mSearchBooksButton = (Button) findViewById(R.id.searchBooksButton);
+        mSearchBooksButton.setOnClickListener(new View.OnClickListener() {
 
 
-                mSearchBooksButton = (Button) findViewById(R.id. searchBooksButton);
-                mSearchBooksButton.setOnClickListener(new View.OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View v) {
-                        String location = mLocationEditText.getText().toString();
-                        Intent intent = new Intent(MainActivity.this, BooksActivity.class);
-                        intent.putExtra("location", location);
-                        startActivity(intent);
-                    }
-                });
-
+            @Override
+            public void onClick(View v) {
+                String location = mLocationEditText.getText().toString();
+                Intent intent = new Intent(MainActivity.this, BooksActivity.class);
+                intent.putExtra("location", location);
+                startActivity(intent);
+            }
+        });
+    }
+}
 
 
 

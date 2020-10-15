@@ -14,7 +14,7 @@
         android:id="@+id/locationTextView"
         android:fontFamily="@font/lily_script_one"
         android:layout_centerVertical="false"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true" /
 
     <ListView
         android:id="@+id/listView"
