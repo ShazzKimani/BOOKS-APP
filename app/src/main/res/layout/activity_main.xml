@@ -17,7 +17,7 @@
         android:fontFamily="@font/lily_script_one"
         android:text="Welcome to TechReads"
         android:textColor="@color/colorTextIcons"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <TextView
@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="410dp"
         android:fontFamily="@font/lily_script_one"
-        android:text=" Get to read the best tech books ever;"
+        android:text=" Get to know who wrote the best books ever;"
         android:textColor="@color/colorTextIcons"
         android:textSize="20sp"
         />
@@ -46,17 +46,7 @@
         android:textSize="20sp"
         />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/locationEditText"
-        android:background="@color/colorTextIcons"
-        android:layout_above="@+id/searchBooksButton"
-        android:layout_marginBottom="10dp"
-        android:padding="5dp"
-        android:fontFamily="@font/lily_script_one"
-        android:hint="Enter type of book"
-        android:layout_centerHorizontal="true" />
+
 
     <Button
 
