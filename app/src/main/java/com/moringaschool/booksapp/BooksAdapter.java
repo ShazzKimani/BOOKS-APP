@@ -1,145 +1,75 @@
 package com.moringaschool.booksapp;
 
 
+import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.SearchView;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.firestore.util.ApiUtil;
-
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 
-public class BooksActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
+public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BookViewHolder> {
 
-    private ProgressBar mProgress;
-    private RecyclerView mBooksView;
+    ArrayList<Book> mBooks;
 
+    public BooksAdapter(ArrayList<Book> books) {
+        this.mBooks = books;
+    }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.search_bar, menu);
-        SearchView searchView = (SearchView) menu.findItem(R.id.app_bar_search).getActionView();
-        searchView.setOnQueryTextListener(this);
+    public BookViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        Context context = viewGroup.getContext();
+        View itemView = LayoutInflater.from(context).inflate(R.layout.books_list, viewGroup, false);
+        return new BookViewHolder(itemView);
+    }
 
-        ArrayList<String> recentList = SharedP.getQueryList(getApplicationContext());
-        int itemNum = recentList.size();
+    @Override
+    public void onBindViewHolder(BookViewHolder bookViewHolder, int i) {
+        Book book = mBooks.get(i);
+        bookViewHolder.bind(book);
+    }
 
-        MenuItem recentMenu;
+    @Override
+    public int getItemCount() {
+        return mBooks.size();
+    }
 
-        for (int i = 0; i < itemNum; i++) {
-            recentMenu = menu.add(Menu.NONE, i, Menu.NONE, recentList.get(i));
+    public class BookViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+        TextView tvBookTitle;
+        TextView tvAuthor;
+        TextView tvPublisher;
+        TextView tvPublishedDate;
+
+        public BookViewHolder(View itemView) {
+            super(itemView);
+            tvBookTitle = itemView.findViewById(R.id.tvBookTitle);
+            tvAuthor = itemView.findViewById(R.id.tvAuthor);
+            tvPublisher = itemView.findViewById(R.id.tvPublisher);
+            tvPublishedDate = itemView.findViewById(R.id.tvPbDate);
+
+            itemView.setOnClickListener(this);
         }
 
-        return true;
-
-
-    }
-
-
-
-
-
-
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-
-        try {
-            URL bookUrl = NetworkUtils.buildUrl(query);
-            new BooksQueryTask().execute(bookUrl);
-        } catch (Exception e) {
-            Log.d("Error", e.getMessage());
-        }
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-
-        return false;
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_books);
-        mProgress = findViewById(R.id.progressBar);
-        mBooksView = findViewById(R.id.mRecyclerView);
-
-        LinearLayoutManager linearLayoutManager = new
-                LinearLayoutManager(this);
-
-        mBooksView.setLayoutManager(linearLayoutManager);
-
-        Intent intent = getIntent();
-        String url = intent.getStringExtra("QUERY");
-        URL bookUrl;
-
-        try {
-            if (url == null || url.isEmpty()) {
-                bookUrl = NetworkUtils.buildUrl("android");
-            } else {
-                bookUrl = new URL(url);
-            }
-            new BooksQueryTask().execute(bookUrl);
-        } catch (Exception e) {
-            Log.d("Error", e.getMessage());
-        }
-    }
-
-
-
-    public class BooksQueryTask extends AsyncTask<URL, Void, String> {
-
-        @Override
-        protected String doInBackground(URL... urls) {
-            URL searchUrl = urls[0];
-            String result = null;
-            try {
-                result = NetworkUtils.getJson(searchUrl);
-            } catch (IOException e) {
-                Log.d("Error", e.getMessage());
-            }
-            return result;
+        public void bind(Book book) {
+            tvBookTitle.setText(book.title);
+            tvAuthor.setText(book.authors);
+            tvPublisher.setText(book.publisher);
+            tvPublishedDate.setText(book.publishedDate);
         }
 
         @Override
-        protected void onPostExecute(String result) {
-            TextView mErrorText = findViewById(R.id.tvError);
-            mProgress.setVisibility(View.INVISIBLE);
-
-            if (result == null) {
-                mBooksView.setVisibility(View.INVISIBLE);
-                mErrorText.setVisibility(View.VISIBLE);
-            } else {
-                mErrorText.setVisibility(View.INVISIBLE);
-                mBooksView.setVisibility(View.VISIBLE);
-
-                ArrayList<Book> mBooks = NetworkUtils.getBooksFromJson(result);
-                BooksAdapter booksAdapter = new BooksAdapter(mBooks);
-                mBooksView.setAdapter(booksAdapter);
-            }
+        public void onClick(View v) {
+            int position = getAdapterPosition();
+            Book selectedBook = mBooks.get(position);
+            Intent intent = new Intent(v.getContext(), BookDetailActivity.class);
+            intent.putExtra("Book",selectedBook);
+            v.getContext().startActivity(intent);
         }
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            mProgress.setVisibility(View.VISIBLE);
-            mBooksView.setVisibility(View.INVISIBLE);
-        }
-
     }
-
 }
