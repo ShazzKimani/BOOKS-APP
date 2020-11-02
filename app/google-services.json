@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1094654802591",
+    "firebase_url": "https://booksapp-68e44.firebaseio.com",
+    "project_id": "booksapp-68e44",
+    "storage_bucket": "booksapp-68e44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094654802591:android:90a59a4932d732b1cec0aa",
+        "android_client_info": {
+          "package_name": "com.moringaschool.booksapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094654802591-30nhvjk2e7q4s5mc0jjf2t2cvh1hcbvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2Mvb0cHS0n0NdeFnx3qgxUXREHOO_cIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094654802591-30nhvjk2e7q4s5mc0jjf2t2cvh1hcbvl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
