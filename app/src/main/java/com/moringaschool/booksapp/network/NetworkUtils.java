@@ -1,7 +1,9 @@
-package com.moringaschool.booksapp;
+package com.moringaschool.booksapp.network;
 
 import android.net.Uri;
 import android.util.Log;
+
+import com.moringaschool.booksapp.models.Book;
 
 import org.json.JSONArray;
 import org.json.JSONException;

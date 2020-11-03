@@ -1,4 +1,4 @@
-package com.moringaschool.booksapp;
+package com.moringaschool.booksapp.network;
 
 import android.content.Context;
 import android.content.SharedPreferences;

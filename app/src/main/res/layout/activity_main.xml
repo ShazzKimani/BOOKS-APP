@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/book2"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
 
     <TextView
@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="410dp"
         android:fontFamily="@font/lily_script_one"
-        android:text=" Get to know who wrote the best books ever;"
+        android:text=" Get to search books, read its synopsis and know who wrote the best books ever;"
         android:textColor="@color/colorTextIcons"
         android:textSize="20sp"
         />
@@ -74,7 +74,7 @@
         android:layout_marginRight="265dp"
         android:layout_marginBottom="12dp"
         android:fontFamily="@font/lily_script_one"
-        android:text="Contact Us" />
+        android:text="Favourites" />
 
 
 </RelativeLayout>

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.moringaschool.booksapp.databinding.ActivityBookDetailBinding;
+import com.moringaschool.booksapp.models.Book;
 
 
 public class BookDetailActivity extends AppCompatActivity {

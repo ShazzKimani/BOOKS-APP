@@ -1,4 +1,4 @@
-package com.moringaschool.booksapp;
+package com.moringaschool.booksapp.ui;
 
 
 import android.content.Intent;
@@ -16,7 +16,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.firestore.util.ApiUtil;
+import com.moringaschool.booksapp.R;
+import com.moringaschool.booksapp.data.BooksAdapter;
+import com.moringaschool.booksapp.models.Book;
+import com.moringaschool.booksapp.network.NetworkUtils;
+import com.moringaschool.booksapp.network.SharedP;
 
 import java.io.IOException;
 import java.net.URL;

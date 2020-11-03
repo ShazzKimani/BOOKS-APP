@@ -8,7 +8,7 @@
 
         <variable
             name="Book"
-            type="com.moringaschool.booksapp.Book" />
+            type="com.moringaschool.booksapp.models.Book" />
     </data>
 
     <ScrollView

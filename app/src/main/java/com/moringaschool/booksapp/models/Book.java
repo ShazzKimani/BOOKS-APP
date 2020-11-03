@@ -1,4 +1,4 @@
-package com.moringaschool.booksapp;
+package com.moringaschool.booksapp.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -7,6 +7,7 @@ import android.widget.ImageView;
 
 import androidx.databinding.BindingAdapter;
 
+import com.moringaschool.booksapp.R;
 import com.squareup.picasso.Picasso;
 
 public class Book implements Parcelable {

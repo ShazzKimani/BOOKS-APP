@@ -1,4 +1,4 @@
-package com.moringaschool.booksapp;
+package com.moringaschool.booksapp.data;
 
 
 import android.content.Context;
@@ -10,6 +10,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.moringaschool.booksapp.BookDetailActivity;
+import com.moringaschool.booksapp.R;
+import com.moringaschool.booksapp.models.Book;
 
 import java.util.ArrayList;
 
