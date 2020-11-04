@@ -15,27 +15,39 @@ User enters input,and clicks a search button then app returns a list of books re
 ## Demo
 ![](images/image1.png)
 * A member user is prompt to login.
+
 ![](images/image2.png)
+* The new user can register with techreads
+
 ![](images/image3.png)
-![](images/image4.png)
+* The user is prompted to the home screen and can search books by clicking the search button, or can add favorite books by clicking the favourite button.
+* Also the user can logout by clicking logout on the overflow menus.
+
 ![](images/image5.png)
+* The User can search any book by clicking the search widget and typing the book name.
+* The App displays a list of the named book or author.
+
 ![](images/image6.png)
-![](images/image7.png)
+* The app, gives the user details about the book.Who is the author?, when the book was published and a brief description of the book.
+
 ![](images/image8.png)
+* When the clicks the favourite button,they are prompted to enter the name or names of favourite books,then the app stores the data in firebase after clicking the submit favourite books. .
+
 ![](images/image9.png)
+* The user can also fetch their favourite books from the firebase realtime database.
 
 ### Development
 Want to contribute? Great!
 
 To fix a bug or enhance an existing module, follow these steps:
 
-*Fork the repo
-*Create a new branch (git checkout -b improve-feature)
-*Make the appropriate changes in the files
-*Add changes to reflect the changes made
-*Commit your changes (git commit -am 'Improve feature')
-*Push to the branch (git push origin improve-feature)
-*Create a Pull Request
+* Fork the repo
+* Create a new branch (git checkout -b improve-feature)
+* Make the appropriate changes in the files
+* Add changes to reflect the changes made
+* Commit your changes (git commit -am 'Improve feature')
+* Push to the branch (git push origin improve-feature)
+* Create a Pull Request
 
 ### Setup/Installation Requirements
   *  To use this project, clone it "https://github.com/ShazzKimani/BOOKS-APP.git"
