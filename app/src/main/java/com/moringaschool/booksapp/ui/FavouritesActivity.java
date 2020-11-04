@@ -28,7 +28,7 @@ public class FavouritesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourites);
         overridePendingTransition(
-                R.anim.enter_activity, R.anim.exit_activity);
+                R.anim.zoom_in, R.anim.zoom_out);
         editText = findViewById(R.id.etValue);
         submit = findViewById(R.id.btnSubmit);
 

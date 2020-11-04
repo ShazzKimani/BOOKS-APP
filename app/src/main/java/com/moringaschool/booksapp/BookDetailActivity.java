@@ -18,7 +18,7 @@ public class BookDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_detail);
         overridePendingTransition(
-                R.anim.enter_activity, R.anim.exit_activity);
+                R.anim.zoom_in, R.anim.zoom_out);
         Book book = getIntent().getParcelableExtra("Book");
         ActivityBookDetailBinding binding = DataBindingUtil
                 .setContentView(this,R.layout.activity_book_detail);

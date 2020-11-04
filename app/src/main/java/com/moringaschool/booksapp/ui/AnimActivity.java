@@ -21,13 +21,14 @@ public class AnimActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anim);
         overridePendingTransition(
-                R.anim.enter_activity, R.anim.exit_activity);
+                R.anim.zoom_in, R.anim.zoom_out);
 
-        imageView=(ImageView)findViewById(R.id.imageView2); // Declare an imageView to show the animation.
-        anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in); // Create the animation.
+        imageView=(ImageView)findViewById(R.id.imageView2);
+        anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
         anim.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
+//
             }
 
             @Override

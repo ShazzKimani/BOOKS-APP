@@ -38,7 +38,7 @@ public class BooksActivity extends AppCompatActivity implements SearchView.OnQue
         SearchView searchView = (SearchView) menu.findItem(R.id.app_bar_search).getActionView();
         searchView.setOnQueryTextListener(this);
         overridePendingTransition(
-                R.anim.enter_activity, R.anim.exit_activity);
+                R.anim.zoom_in, R.anim.zoom_out);
         ArrayList<String> recentList = SharedP.getQueryList(getApplicationContext());
         int itemNum = recentList.size();
 

@@ -43,7 +43,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         overridePendingTransition(
-                R.anim.enter_activity, R.anim.exit_activity);
+                R.anim.zoom_in, R.anim.zoom_out);
         mFullName   = findViewById(R.id.fullName);
         mEmail      = findViewById(R.id.Email);
         mPassword   = findViewById(R.id.password);
