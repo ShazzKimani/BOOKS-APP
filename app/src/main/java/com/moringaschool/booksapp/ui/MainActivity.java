@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        overridePendingTransition(
+                R.anim.enter_activity, R.anim.exit_activity);
         ButterKnife.bind(this);
 
         mContactUsButton = (Button) findViewById(R.id.contactUsButton);

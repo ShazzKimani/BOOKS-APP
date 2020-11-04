@@ -13,6 +13,19 @@ This is an application that allows users to search technology books,and read the
 ### BDD
 User enters input,and clicks a search button then app returns a list of books related to the search.
 
+### Development
+Want to contribute? Great!
+
+To fix a bug or enhance an existing module, follow these steps:
+
+*Fork the repo
+*Create a new branch (git checkout -b improve-feature)
+*Make the appropriate changes in the files
+*Add changes to reflect the changes made
+*Commit your changes (git commit -am 'Improve feature')
+*Push to the branch (git push origin improve-feature)
+*Create a Pull Request
+
 ### Setup/Installation Requirements
   *  To use this project, clone it "https://github.com/ShazzKimani/BOOKS-APP.git"
 * Fire up Android Studio and make alterations however you want.
