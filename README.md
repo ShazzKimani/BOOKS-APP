@@ -8,8 +8,10 @@ This is an application that allows users to search technology books,and read the
 * Android Studio
 * Java Development Kit
 ### Technologies Used
-* Java
+* Java/Android
 * ButterKnife
+* Firebase
+* Google Books API
 ### BDD
 User enters input,and clicks a search button then app returns a list of books related to the search.
 ## Demo
